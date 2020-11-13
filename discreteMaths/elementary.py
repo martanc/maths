@@ -6,7 +6,7 @@ def commonDivisors(num1, num2):
     """
 
     divisors = list()
-    for x in range(1, max(num1, num2)):
+    for x in range(1, min(abs(num1), abs(num2))+1):
         if (num1 % x == 0 ) & (num2 % x == 0):
             divisors.append(x)
     return divisors
@@ -18,7 +18,7 @@ def divisors(num):
     :param num1: number from which calculate the divisors
     """
     divisors = list()
-    for x in range(1, abs(num)):
+    for x in range(1, abs(num)+1):
         if num % x == 0:
             divisors.append(x)
     return divisors
